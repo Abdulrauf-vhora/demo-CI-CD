@@ -46,7 +46,7 @@ echo "App Name ${2}"
     cd $project_name
     ls
     echo "IOS project_name 22 after ls"
-    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
+    # plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     # echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
 
     echo "android time PWD 44 ==> ${PWD}"
