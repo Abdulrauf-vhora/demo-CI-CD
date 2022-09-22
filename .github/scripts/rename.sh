@@ -35,6 +35,7 @@ echo "App Name ${2}"
 
     echo "IOS time PWD 22 ==> ${PWD}"
     cd ios
+    echo "INSIDE IOS"
 
     ls
     echo "IOS time PWD 22 ls DOne "
