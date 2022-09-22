@@ -17,7 +17,6 @@ jobs:
     steps:
       - name: Checkout code for app release
         uses: actions/checkout@v2
-      - name: GitHub Script
       - uses: actions/github-script@v6
         with:
           script: |
