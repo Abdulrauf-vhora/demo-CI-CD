@@ -11,8 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
- 
+    
     - name: Create local changes
       run: |
         ...
@@ -23,4 +22,6 @@ jobs:
         git commit -m "Add changes" -a
     - name: Push changes
       uses: Abdulrauf-vhora/demo-CI-CD@main
-  
+      with:
+        branch: main
+        github_token: ${{ secrets.GITHUB_TOKEN }}
