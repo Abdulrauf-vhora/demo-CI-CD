@@ -24,7 +24,7 @@ jobs:
             const script = require('/Users/CS012/Abdul/Script/rename.sh')
             console.log(script({github, context}))
 
-  
+     
       # - name: Install npm dependencies
       #   run: npm install --legacy-peer-deps
 
