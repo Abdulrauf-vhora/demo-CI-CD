@@ -8,7 +8,7 @@ WHITE='\033[1;37m'
 project_name=$1
 APP_NAME=$2
 # SCRIPT_PATH=$3
-GLOBAL_PATH=/Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
+# GLOBAL_PATH=/Users/CS012/Abdul/ReactNative/Practice/AwesomeProjects
 # GLOBAL_PATH='/Users/CS012/Abdul/ReactNative/Practice/AwesomeProject'
 
 # *** CHANGE DIRECTORY TO THE GLOBAL PATH ***
@@ -18,8 +18,8 @@ echo "App Name ${2}"
 # if [[ -n "$1" || -n "$2" ]]
 # then
     # cd "${GLOBAL_PATH}"
-    echo "GLOBAL_PATH PWD==> ${PWD}"
-    echo "GLOBAL_PATH ==> ${GLOBAL_PATH}"
+    # echo "GLOBAL_PATH PWD==> ${PWD}"
+    # echo "GLOBAL_PATH ==> ${GLOBAL_PATH}"
     # yarn
 
     # # *** REMOVE SPACES IN VARIABLE ***
@@ -30,17 +30,18 @@ echo "App Name ${2}"
 
     # # *** RENAMING APP NAME IOS***
     echo "IOS time PWD ==> ${PWD}"
-    echo "IOS time LSLS ==> ${ls}"
+    ls
+    # echo "IOS time LSLS ==> ${ls}"
 
-    cd "${GLOBAL_PATH}/ios"
+    cd ios
     sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
-
+    ls
     # # *** RENAMING APP NAME ANDROID***
-    cd "${GLOBAL_PATH}/ios/$project_name"
+    cd "/ios/$project_name"
     plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
-    echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
+    # echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
 
-    cd "${GLOBAL_PATH}/android/app/src/main/res/values"
+    cd "/android/app/src/main/res/values"
     sed -i "" -e 's+<string name="app_name">.*</string>+<string name="app_name">'${APP_NAME}'</string>+g' strings.xml
 
     # echo "DONE ==> ${PWD}"
