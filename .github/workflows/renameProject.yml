@@ -11,7 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    
+    - name: Checkout code for app release
+      uses: actions/renameProject@v1
     - name: Create local changes
       run: |
         ...
