@@ -15,7 +15,7 @@ jobs:
       CI_COMMIT_AUTHOR: Continuous Integration
     steps:
     - name: Checkout code for app release
-      uses: actions/checkout@mail
+      uses: actions/checkout@v2
       
     # Commit and push all changed files.
     - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
