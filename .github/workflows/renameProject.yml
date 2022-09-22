@@ -16,7 +16,7 @@ jobs:
       - name: Checkout code for app release
         uses: actions/checkout@v2
       - name: rename project
-        run: .sh ./.github/scripts/rename.sh demo demoAPP /Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
+        run: sh ./.github/scripts/rename.sh demo demoAPP /Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
 
       # - name: Install npm dependencies
       #   run: npm install --legacy-peer-deps
