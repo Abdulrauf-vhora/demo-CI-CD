@@ -36,6 +36,7 @@ echo "App Name ${2}"
     echo "IOS time PWD 22 ==> ${PWD}"
     cd ios
     ls
+    echo "@@@@@@ ==> ${PWD}"
     sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name,g" ./$project_name.xcodeproj/project.pbxproj
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
