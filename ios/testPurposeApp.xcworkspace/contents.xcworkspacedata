@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:krupalApp.xkrupalAppproj">
+      location = "group:testPurposeApp.xtestPurposeAppproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xkrupalAppproj">
+      location = "group:Pods/Pods.xtestPurposeAppproj">
    </FileRef>
 </Workspace>

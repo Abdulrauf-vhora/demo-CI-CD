@@ -1,4 +1,4 @@
-package com.krupalapp.newarchitecture.components;
+package com.testpurposeapp.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

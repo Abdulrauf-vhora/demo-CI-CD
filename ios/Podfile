@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '12.4'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'krupalApp' do
+target 'testPurposeApp' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -19,7 +19,7 @@ target 'krupalApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'krupalAppTests' do
+  target 'testPurposeAppTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -32,6 +32,6 @@ target 'krupalApp' do
 
   post_install do |installer|
     react_native_post_install(installer)
-    __apply_XkrupalApp_12_5_M1_post_install_workaround(installer)
+    __apply_XtestPurposeApp_12_5_M1_post_install_workaround(installer)
   end
 end

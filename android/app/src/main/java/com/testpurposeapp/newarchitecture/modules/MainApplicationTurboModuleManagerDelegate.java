@@ -1,4 +1,4 @@
-package com.krupalapp.newarchitecture.modules;
+package com.testpurposeapp.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
