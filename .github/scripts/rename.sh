@@ -53,7 +53,7 @@ echo "App Name ${2}"
     echo ${APP_NAME}
     echo "plutil -p file.plist"
     plutil -p file.plist
-    # plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
+    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     echo "after RENAMING GLOBAL_PATH ==> ls"
 
     echo "android time PWD 44 ==> ${PWD}"
