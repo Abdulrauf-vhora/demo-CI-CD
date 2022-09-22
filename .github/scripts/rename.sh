@@ -34,12 +34,12 @@ echo "App Name ${2}"
     # echo "IOS time LSLS ==> ${ls}"
 
     echo "IOS time PWD 22 ==> ${PWD}"
-    cd AwesomeProject/ios
+    cd ios
     sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
     ls
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
-    cd "/ios/$project_name"
+    cd /ios/$project_name
     plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     ls
     # echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
