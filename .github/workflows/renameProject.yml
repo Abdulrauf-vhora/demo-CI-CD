@@ -26,4 +26,4 @@ jobs:
       uses: Abdulrauf-vhora/demo-CI-CD@main
       with:
         branch: main
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: "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"
