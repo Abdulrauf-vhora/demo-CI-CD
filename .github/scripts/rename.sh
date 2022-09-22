@@ -10,14 +10,14 @@ APP_NAME=$2
 # SCRIPT_PATH=$3
 GLOBAL_PATH=$3
 # GLOBAL_PATH='/Users/CS012/Abdul/ReactNative/Practice/AwesomeProject'
-SCRIPT_PATH='/Users/CS012/Abdul/Script/'
+SCRIPT_PATH='/Users/CS012/Abdul/Script'
 
 # *** CHANGE DIRECTORY TO THE GLOBAL PATH ***
 echo "Project Name ${1}"
 echo "App Name ${2}"
 # if [[ -n "$1" || -n "$2" ]]
 # then
-    cd "${GLOBAL_PATH}/"
+    cd "${GLOBAL_PATH}"
     echo "GLOBAL_PATH ==> ${GLOBAL_PATH}"
     yarn
 
@@ -38,8 +38,8 @@ echo "App Name ${2}"
     cd "${GLOBAL_PATH}/android/app/src/main/res/values"
     sed -i "" -e 's+<string name="app_name">.*</string>+<string name="app_name">'${APP_NAME}'</string>+g' strings.xml
 
-    cd $SCRIPT_PATH 
-    sh ./generate-apk.sh $1 $GLOBAL_PATH
+    # cd $SCRIPT_PATH 
+    # sh ./generate-apk.sh $1 $GLOBAL_PATH
     
     echo "RENAMING THE PROJECT NAME IS COMPLETED"
 # else
