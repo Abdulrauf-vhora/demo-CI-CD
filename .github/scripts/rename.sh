@@ -40,6 +40,8 @@ echo "App Name ${2}"
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
     echo "IOS project_name 11 ==> ${project_name}"
+    ls
+    echo "IOS project_name before 1.5555  ls"
     cd $project_name
     ls
     echo "IOS project_name 22 after ls"
