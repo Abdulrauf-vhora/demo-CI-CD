@@ -13,6 +13,8 @@ jobs:
     env:
       SCRIPT_PATH: /Users/CS012/Abdul/Script
     steps:
+      - name: install pluti
+        run: sudo apt install libpng-dev libpng16-16 libxml2-dev pkg-config ninja-build
       - name: Checkout code for app release
         uses: actions/checkout@v2
       - name: rename project
