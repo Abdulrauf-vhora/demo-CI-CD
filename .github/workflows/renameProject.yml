@@ -9,8 +9,5 @@ jobs:
     name: change project name
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code for app release
-        uses: actions/checkout@v2
-
       - name: start renaming project
         run: npx react-native-rename demoApp -b com.demoApp
