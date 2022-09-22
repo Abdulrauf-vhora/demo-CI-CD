@@ -42,9 +42,11 @@ echo "App Name ${2}"
     # sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
+    echo "IOS project_name 11 ==> ${project_name}"
     cd ios/$project_name
-    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     ls
+    echo "IOS project_name 22 after ls"
+    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     # echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
 
     echo "android time PWD 44 ==> ${PWD}"
