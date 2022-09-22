@@ -15,9 +15,10 @@ SCRIPT_PATH='/Users/CS012/Abdul/Script/'
 # *** CHANGE DIRECTORY TO THE GLOBAL PATH ***
 echo "Project Name ${1}"
 echo "App Name ${2}"
-if [[ -n "$1" || -n "$2" ]]
-then
+# if [[ -n "$1" || -n "$2" ]]
+# then
     cd "${GLOBAL_PATH}/"
+    echo "GLOBAL_PATH ==> ${GLOBAL_PATH}"
     yarn
 
     # *** REMOVE SPACES IN VARIABLE ***
@@ -41,6 +42,6 @@ then
     sh ./generate-apk.sh $1 $GLOBAL_PATH
     
     echo "RENAMING THE PROJECT NAME IS COMPLETED"
-else
-    echo "Package-Name OR App-Name Not Found"
-fi
+# else
+#     echo "Package-Name OR App-Name Not Found"
+# fi
