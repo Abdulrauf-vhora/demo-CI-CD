@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code for app release
-      uses: actions/renameProject@v1
+      uses: actions/checkout@v2
+
     - name: Create local changes
       run: |
         ...
