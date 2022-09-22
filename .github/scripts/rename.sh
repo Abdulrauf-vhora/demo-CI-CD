@@ -56,6 +56,7 @@ echo "App Name ${2}"
     echo "after RENAMING GLOBAL_PATH ==> ls"
 
     echo "android time PWD 44 ==> ${PWD}"
+    ls
     cd /android/app/src/main/res/values 
     ls
     echo "android time PWD after ls ==> ${PWD}"
