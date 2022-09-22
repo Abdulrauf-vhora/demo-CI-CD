@@ -53,7 +53,8 @@ echo "App Name ${2}"
     echo "IOS project_name 22 after ls"
     echo ${APP_NAME}
     echo "plutil -p file.plist"
-    /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $APP_NAME" Info.plist
+    /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $APP_NAME" "Info.plist
+    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     echo "after RENAMING GLOBAL_PATH ==> ls"
 
     echo "android time PWD 44 ==> ${PWD}"
