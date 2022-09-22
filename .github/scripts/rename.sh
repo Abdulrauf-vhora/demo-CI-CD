@@ -29,6 +29,8 @@ echo "App Name ${2}"
     npx react-native-rename $project_name -b com.$project_name
 
     # # *** RENAMING APP NAME IOS***
+    echo "IOS time GLOBAL_PATH ==> ${GLOBAL_PATH}"
+
     cd "${GLOBAL_PATH}/ios"
     sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
 
