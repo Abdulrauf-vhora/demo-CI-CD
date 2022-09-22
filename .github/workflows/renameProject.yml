@@ -1,28 +1,22 @@
-name: change project name
 
-# Controls when the action will run.
+name: Generate release APK
 env:
   APP_NAME: abdulvhora
+# Controls when the action will run.
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
-  rename-project-name:
-    name: change project name
+  package-release-apk:
+    name: Generate release APK
     runs-on: ubuntu-latest
     steps:
- 
-      - name: start renaming project
-        run: echo start work 
-        
-      - name: start renaming project
-        run: echo "$APP_NAME"
-        
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-        
+      - name: Checkout code for app release
+        uses: actions/checkout@v2
+
+      - name: Install npm dependencies
+        run: npm install --legacy-peer-deps
+
       - name: Generate signed APK
         run: cd android && ./gradlew app:assembleRelease
 
