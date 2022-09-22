@@ -50,7 +50,8 @@ echo "App Name ${2}"
     cd $project_name
     ls
     echo "IOS project_name 22 after ls"
-    yum provides plutil
+    echo "APP NAME ${APP_NAME}"
+    # yum provides plutil
     plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
     echo "after RENAMING GLOBAL_PATH ==> ls"
 
