@@ -15,11 +15,8 @@ jobs:
     steps:
       - name: Checkout code for app release
         uses: actions/checkout@v2
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            const script = require("$SCRIPT_PATH/./rename.sh")
-            console.log(script({github, context}))
+      - name: rename project
+        run: .sh ./.github/scripts/rename.sh demo demoAPP /Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
 
       # - name: Install npm dependencies
       #   run: npm install --legacy-peer-deps
