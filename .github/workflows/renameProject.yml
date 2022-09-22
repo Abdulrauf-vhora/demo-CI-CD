@@ -24,5 +24,5 @@ jobs:
       run: |
         git config --global user.name "abdul"
         git config --global user.email "abdulrauf_vhora@codenticsoftware.com"
-        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git commit -m "First release of Hello World!"
         git push
