@@ -26,6 +26,7 @@ echo "App Name ${2}"
     # # ${str// /_}
 
     # # # *** RENAMING PROJECT ***
+    sudo apt install libpng-dev libpng16-16 libxml2-dev pkg-config ninja-build
     npx react-native-rename $project_name -b com.$project_name
 
     # # *** RENAMING APP NAME IOS***
