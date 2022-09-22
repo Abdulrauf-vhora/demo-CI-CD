@@ -14,6 +14,7 @@ SCRIPT_PATH='/Users/CS012/Abdul/Script'
 
 # *** CHANGE DIRECTORY TO THE GLOBAL PATH ***
 echo "Project Name ${1}"
+# ${PWD} working dir
 echo "App Name ${2}"
 # if [[ -n "$1" || -n "$2" ]]
 # then
