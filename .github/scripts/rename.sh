@@ -29,21 +29,25 @@ echo "App Name ${2}"
     npx react-native-rename $project_name -b com.$project_name
 
     # # *** RENAMING APP NAME IOS***
-    echo "IOS time PWD ==> ${PWD}"
+    echo "IOS time PWD 11 ==> ${PWD}"
     ls
     # echo "IOS time LSLS ==> ${ls}"
 
     cd ios
     sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
+    echo "IOS time PWD 22 ==> ${PWD}"
     ls
     # # *** RENAMING APP NAME ANDROID***
+    echo "IOS time PWD 33 ==> ${PWD}"
     cd "/ios/$project_name"
     plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
+    ls
     # echo "after RENAMING GLOBAL_PATH ==> ${GLOBAL_PATH}"
 
+    echo "android time PWD 44 ==> ${PWD}"
     cd "/android/app/src/main/res/values"
     sed -i "" -e 's+<string name="app_name">.*</string>+<string name="app_name">'${APP_NAME}'</string>+g' strings.xml
-
+    ls
     # echo "DONE ==> ${PWD}"
     # # cd $SCRIPT_PATH 
     # # sh ./generate-apk.sh $1 $GLOBAL_PATH
