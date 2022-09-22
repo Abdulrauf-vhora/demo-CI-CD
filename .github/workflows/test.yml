@@ -1,0 +1,24 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code for app release
+        uses: actions/checkout@v2
+
+      - name: Create local changes
+      - name: Commit files
+        run: |
+          git config --local user.email "abdulrauf_vhora@codenticsoftware.com"
+          git config --local user.name "abdul"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: Abdulrauf-vhora/demo-CI-CD@main
+        with:
+          branch: main
+          github_token: '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'
