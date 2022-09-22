@@ -1,6 +1,6 @@
 name: Generate release APK
-env:
-  PROJECT_NAME: Monday
+# env:
+#   PROJECT_NAME: Monday
 
   
 # Controls when the action will run.
@@ -12,8 +12,8 @@ jobs:
   package-release-apk:
     name: Generate release APK
     runs-on: ubuntu-latest
-    env:
-      APP_NAME: /Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
+#     env:
+#       APP_NAME: /Users/CS012/Abdul/ReactNative/Practice/AwesomeProject
     steps:
       - name: Checkout code for app release
         uses: actions/checkout@v2
