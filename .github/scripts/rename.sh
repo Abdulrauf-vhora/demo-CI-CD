@@ -43,7 +43,7 @@ echo "App Name ${2}"
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
     echo "IOS project_name 11 ==> ${project_name}"
-    cd ios/$project_name
+    cd $project_name
     ls
     echo "IOS project_name 22 after ls"
     plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
