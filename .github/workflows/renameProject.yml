@@ -20,9 +20,10 @@ jobs:
     # Commit and push all changed files.
     - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
       # Only run on main branch push (e.g. after pull request merge).
-      if: github.event_name == 'push'
-      run: |
+      run:
         git config --global user.name "abdul"
         git config --global user.email "abdulrauf_vhora@codenticsoftware.com"
-        git commit -m "First release of Hello World!"
-        git push
+        git commit -m "Add changes" -a
+             
+    - name: Push changes
+      uses: Abdulrauf-vhora/demo-CI-CD@main
