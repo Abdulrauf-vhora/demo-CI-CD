@@ -10,20 +10,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
-      CI_COMMIT_AUTHOR: Continuous Integration
     steps:
-    - name: Checkout code for app release
-      uses: actions/checkout@v2
-      
-    # Commit and push all changed files.
-    - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
-      # Only run on main branch push (e.g. after pull request merge).
-      run:
-        git config --global user.name "abdul"
-        git config --global user.email "abdulrauf_vhora@codenticsoftware.com"
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - name: Create local changes
+      run: |
+        ...
+    - name: Commit files
+      run: |
+        git config --local user.email "abdulrauf_vhora@codenticsoftware.com"
+        git config --local user.name "abdul"
         git commit -m "Add changes" -a
-             
     - name: Push changes
       uses: Abdulrauf-vhora/demo-CI-CD@main
+  
