@@ -11,3 +11,13 @@ jobs:
     steps:
       - name: start renaming project
         run: npx react-native-rename demoApp -b com.demoApp
+      
+    - name: Commit files
+      run: |
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: Abdulrauf-vhora/demo-CI-CD@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+  
