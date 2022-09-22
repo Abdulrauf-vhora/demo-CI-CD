@@ -14,9 +14,9 @@ jobs:
       CI_COMMIT_MESSAGE: Continuous Integration Build Artifacts
       CI_COMMIT_AUTHOR: Continuous Integration
     steps:
-    - uses: actions/checkout@v1
-
-
+    
+    - name: Checkout code for app release
+      uses: actions/checkout@v2
 
     # Commit and push all changed files.
     - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
