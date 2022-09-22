@@ -38,10 +38,10 @@ echo "App Name ${2}"
     ls
     echo "@@@@@@ ==> ${PWD}"
     echo "project name ==> $project_name"
-    echo "project path ==> $project_name.xcodeproj/project.pbxproj"
-    echo "project path 222 ==> /$project_name.xcodeproj/project.pbxproj"
-    sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name,g" /$project_name.xcodeproj/project.pbxproj
-    echo "@@@@@@ 2222 ==> ${PWD}"
+    # echo "project path ==> $project_name.xcodeproj/project.pbxproj"
+    # echo "project path 222 ==> $project_name.xcodeproj/project.pbxproj"
+    # sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name,g" $project_name.xcodeproj/project.pbxproj
+    # echo "@@@@@@ 2222 ==> ${PWD}"
     # # *** RENAMING APP NAME ANDROID***
     echo "IOS time PWD 33 ==> ${PWD}"
     echo "IOS project_name 11 ==> ${project_name}"
