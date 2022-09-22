@@ -27,18 +27,18 @@ echo "App Name ${2}"
     # # ${str// /_}
 
     # # # *** RENAMING PROJECT ***
-    # npx react-native-rename $project_name -b com.$project_name
+    npx react-native-rename $project_name -b com.$project_name
 
-    # # # *** RENAMING APP NAME IOS***
-    # cd "${GLOBAL_PATH}/ios"
-    # sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
+    # # *** RENAMING APP NAME IOS***
+    cd "${GLOBAL_PATH}/ios"
+    sed -i '' -e "s,PRODUCT_BUNDLE_IDENTIFIER = .*,PRODUCT_BUNDLE_IDENTIFIER = com.$project_name;,g" ./$project_name.xcodeproj/project.pbxproj
 
-    # # # *** RENAMING APP NAME ANDROID***
-    # cd "${GLOBAL_PATH}/ios/$project_name"
-    # plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
+    # # *** RENAMING APP NAME ANDROID***
+    cd "${GLOBAL_PATH}/ios/$project_name"
+    plutil -replace CFBundleDisplayName -string $APP_NAME Info.plist
 
-    # cd "${GLOBAL_PATH}/android/app/src/main/res/values"
-    # sed -i "" -e 's+<string name="app_name">.*</string>+<string name="app_name">'${APP_NAME}'</string>+g' strings.xml
+    cd "${GLOBAL_PATH}/android/app/src/main/res/values"
+    sed -i "" -e 's+<string name="app_name">.*</string>+<string name="app_name">'${APP_NAME}'</string>+g' strings.xml
 
     # # cd $SCRIPT_PATH 
     # # sh ./generate-apk.sh $1 $GLOBAL_PATH
